@@ -23,5 +23,5 @@ run_analysis.R <- function(testpath, trainpath, featurepath, outputpath){
     }
     groupeddata <- group_by(fullmeanstd, Subject, Activity)
     summarizeddata <- summarize_all(groupeddata, funs(mean))
-    write.csv(summarizeddata, paste(outputpath, "finalproduct.csv", sep = "", row.names = FALSE))
+    write.csv(summarizeddata, paste(outputpath, "finalproduct.csv", sep = ""), row.names = FALSE)
 }
