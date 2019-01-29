@@ -1,4 +1,5 @@
 run_analysis.R <- function(testpath, trainpath, featurepath, outputpath){
+    library(dplyr)
     
     testactivity <- read.table(file = paste(testpath, "y_test.txt", sep = ""))
     testsubject <- read.table(file = paste(testpath, "subject_test.txt", sep = ""))
@@ -22,5 +23,5 @@ run_analysis.R <- function(testpath, trainpath, featurepath, outputpath){
     }
     groupeddata <- group_by(fullmeanstd, Subject, Activity)
     summarizeddata <- summarize_all(groupeddata, funs(mean))
-    write.csv(summarizeddata, paste(outputpath, "finalproduct.csv", sep = ""))
+    write.csv(summarizeddata, paste(outputpath, "finalproduct.csv", sep = "", row.names = FALSE))
 }
