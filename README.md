@@ -1,6 +1,8 @@
 ## Course 3 README
 # This file describes the process used to create the finalproduct.csv tidy dataset
 
+Note: The .R file submitted is a function that requires 4 inputs in this order: the path of the test data, the path of the training data, the path of the features.txt file, the desired output path of the final dataset.
+
 1. Read in all the test and training data. This includes the data with measurements, the activity number, and the subject number.
 2. Column merge the 3 files for test and training data separately.
 3. Row merge the full test and training data.
